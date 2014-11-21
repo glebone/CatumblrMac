@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E4D53FF1F1161E8F16E759E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1B93F354833102955E7704 /* libPods.a */; };
+		F72B5C821A1F80D900154E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B5C811A1F80D900154E71 /* AppDelegate.swift */; };
+		F72B5C841A1F80D900154E71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B5C831A1F80D900154E71 /* ViewController.swift */; };
+		F72B5C861A1F80D900154E71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F72B5C851A1F80D900154E71 /* Images.xcassets */; };
+		F72B5C891A1F80D900154E71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72B5C871A1F80D900154E71 /* Main.storyboard */; };
+		F72B5C951A1F80D900154E71 /* CatumblrMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B5C941A1F80D900154E71 /* CatumblrMacTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F72B5C8F1A1F80D900154E71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F72B5C741A1F80D900154E71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F72B5C7B1A1F80D900154E71;
+			remoteInfo = CatumblrMac;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29A465D9C9D87E2D8BE4CAC7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		421E86A719D593E464EF7DEF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CB1B93F354833102955E7704 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F72B5C7C1A1F80D900154E71 /* CatumblrMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatumblrMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F72B5C801A1F80D900154E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F72B5C811A1F80D900154E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F72B5C831A1F80D900154E71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F72B5C851A1F80D900154E71 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F72B5C881A1F80D900154E71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F72B5C8E1A1F80D900154E71 /* CatumblrMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatumblrMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F72B5C931A1F80D900154E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F72B5C941A1F80D900154E71 /* CatumblrMacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatumblrMacTests.swift; sourceTree = "<group>"; };
+		F72B5C9E1A1F8BE500154E71 /* SwiftPods-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftPods-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F72B5C791A1F80D900154E71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E4D53FF1F1161E8F16E759E /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F72B5C8B1A1F80D900154E71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		179492E602FDBBBF223D9902 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				421E86A719D593E464EF7DEF /* Pods.debug.xcconfig */,
+				29A465D9C9D87E2D8BE4CAC7 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		62A57EF0369B033B9D50EDA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB1B93F354833102955E7704 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F72B5C731A1F80D900154E71 = {
+			isa = PBXGroup;
+			children = (
+				F72B5C7E1A1F80D900154E71 /* CatumblrMac */,
+				F72B5C911A1F80D900154E71 /* CatumblrMacTests */,
+				F72B5C7D1A1F80D900154E71 /* Products */,
+				179492E602FDBBBF223D9902 /* Pods */,
+				62A57EF0369B033B9D50EDA2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F72B5C7D1A1F80D900154E71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F72B5C7C1A1F80D900154E71 /* CatumblrMac.app */,
+				F72B5C8E1A1F80D900154E71 /* CatumblrMacTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F72B5C7E1A1F80D900154E71 /* CatumblrMac */ = {
+			isa = PBXGroup;
+			children = (
+				F72B5C811A1F80D900154E71 /* AppDelegate.swift */,
+				F72B5C831A1F80D900154E71 /* ViewController.swift */,
+				F72B5C851A1F80D900154E71 /* Images.xcassets */,
+				F72B5C871A1F80D900154E71 /* Main.storyboard */,
+				F72B5C7F1A1F80D900154E71 /* Supporting Files */,
+				F72B5C9E1A1F8BE500154E71 /* SwiftPods-Bridging-Header.h */,
+			);
+			path = CatumblrMac;
+			sourceTree = "<group>";
+		};
+		F72B5C7F1A1F80D900154E71 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F72B5C801A1F80D900154E71 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F72B5C911A1F80D900154E71 /* CatumblrMacTests */ = {
+			isa = PBXGroup;
+			children = (
+				F72B5C941A1F80D900154E71 /* CatumblrMacTests.swift */,
+				F72B5C921A1F80D900154E71 /* Supporting Files */,
+			);
+			path = CatumblrMacTests;
+			sourceTree = "<group>";
+		};
+		F72B5C921A1F80D900154E71 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F72B5C931A1F80D900154E71 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F72B5C7B1A1F80D900154E71 /* CatumblrMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F72B5C981A1F80D900154E71 /* Build configuration list for PBXNativeTarget "CatumblrMac" */;
+			buildPhases = (
+				B1C445025F0B56976EE7255E /* Check Pods Manifest.lock */,
+				F72B5C781A1F80D900154E71 /* Sources */,
+				F72B5C791A1F80D900154E71 /* Frameworks */,
+				F72B5C7A1A1F80D900154E71 /* Resources */,
+				A0BD5800BBBEBB6E1051487B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CatumblrMac;
+			productName = CatumblrMac;
+			productReference = F72B5C7C1A1F80D900154E71 /* CatumblrMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F72B5C8D1A1F80D900154E71 /* CatumblrMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F72B5C9B1A1F80D900154E71 /* Build configuration list for PBXNativeTarget "CatumblrMacTests" */;
+			buildPhases = (
+				F72B5C8A1A1F80D900154E71 /* Sources */,
+				F72B5C8B1A1F80D900154E71 /* Frameworks */,
+				F72B5C8C1A1F80D900154E71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F72B5C901A1F80D900154E71 /* PBXTargetDependency */,
+			);
+			name = CatumblrMacTests;
+			productName = CatumblrMacTests;
+			productReference = F72B5C8E1A1F80D900154E71 /* CatumblrMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F72B5C741A1F80D900154E71 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = gleb;
+				TargetAttributes = {
+					F72B5C7B1A1F80D900154E71 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					F72B5C8D1A1F80D900154E71 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = F72B5C7B1A1F80D900154E71;
+					};
+				};
+			};
+			buildConfigurationList = F72B5C771A1F80D900154E71 /* Build configuration list for PBXProject "CatumblrMac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F72B5C731A1F80D900154E71;
+			productRefGroup = F72B5C7D1A1F80D900154E71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F72B5C7B1A1F80D900154E71 /* CatumblrMac */,
+				F72B5C8D1A1F80D900154E71 /* CatumblrMacTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F72B5C7A1A1F80D900154E71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72B5C861A1F80D900154E71 /* Images.xcassets in Resources */,
+				F72B5C891A1F80D900154E71 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F72B5C8C1A1F80D900154E71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0BD5800BBBEBB6E1051487B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1C445025F0B56976EE7255E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F72B5C781A1F80D900154E71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72B5C841A1F80D900154E71 /* ViewController.swift in Sources */,
+				F72B5C821A1F80D900154E71 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F72B5C8A1A1F80D900154E71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72B5C951A1F80D900154E71 /* CatumblrMacTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F72B5C901A1F80D900154E71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F72B5C7B1A1F80D900154E71 /* CatumblrMac */;
+			targetProxy = F72B5C8F1A1F80D900154E71 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F72B5C871A1F80D900154E71 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F72B5C881A1F80D900154E71 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F72B5C961A1F80D900154E71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F72B5C971A1F80D900154E71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F72B5C991A1F80D900154E71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 421E86A719D593E464EF7DEF /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CatumblrMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CatumblrMac/SwiftPods-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		F72B5C9A1A1F80D900154E71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29A465D9C9D87E2D8BE4CAC7 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CatumblrMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CatumblrMac/SwiftPods-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		F72B5C9C1A1F80D900154E71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CatumblrMacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatumblrMac.app/Contents/MacOS/CatumblrMac";
+			};
+			name = Debug;
+		};
+		F72B5C9D1A1F80D900154E71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CatumblrMacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatumblrMac.app/Contents/MacOS/CatumblrMac";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F72B5C771A1F80D900154E71 /* Build configuration list for PBXProject "CatumblrMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F72B5C961A1F80D900154E71 /* Debug */,
+				F72B5C971A1F80D900154E71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F72B5C981A1F80D900154E71 /* Build configuration list for PBXNativeTarget "CatumblrMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F72B5C991A1F80D900154E71 /* Debug */,
+				F72B5C9A1A1F80D900154E71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F72B5C9B1A1F80D900154E71 /* Build configuration list for PBXNativeTarget "CatumblrMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F72B5C9C1A1F80D900154E71 /* Debug */,
+				F72B5C9D1A1F80D900154E71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F72B5C741A1F80D900154E71 /* Project object */;
+}
