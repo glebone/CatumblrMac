@@ -46,7 +46,7 @@ class ViewController: NSViewController {
         let params : [NSString]? = ["1", "2"]
        
         
-        //tumblrCl.posts("geekhost", type: "text", parameters: params!, callback: nil)
+        tumblrCl.posts("geekhost", type: "text", parameters: params!, callback: nil)
        
         
 
