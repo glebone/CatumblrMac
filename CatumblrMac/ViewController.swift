@@ -43,12 +43,14 @@ class ViewController: NSViewController {
         tumblrCl.OAuthToken = "PyvcruFPx1YqhdAOkCWjCPWMBIYx3fUJaiFzjhxpkwUwps0VjC"
         tumblrCl.OAuthTokenSecret = "Zjwmi2wYA83rtIdoL82BcWcj5sxm5QrI1MEnZX4DzFQHWydx1C"
         
-        let params : [NSString]? = ["1", "2"]
+        let params : [NSString : NSString]? = ["type":"text", "body": "Sample text", "caption": "caption", "tags":"tags"]
        
         
-        tumblrCl.posts("geekhost", type: "text", parameters: params!, callback: nil)
-       
-        
+        tumblrCl.post("geekhost", type: "text", parameters: params!, callback: { (id : AnyObject!, err : NSError!) in
+            
+            println("Message Send")
+            
+        }        )
 
 
   }
