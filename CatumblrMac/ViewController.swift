@@ -7,6 +7,8 @@
 //
 
 import Cocoa
+import Alamofire
+import SwiftyJSON
 
 class ViewController: NSViewController {
 
@@ -14,9 +16,29 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var TempLabel: NSTextField!
     
+    let weatherRequest : URLStringConvertible = "http://www.myweather2.com/developer/forecast.ashx?uac=pP9Pz3soUU&output=json&query=%2049.425267,%2032.063599&temp_unit=c"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Alamofire.request(.GET, weatherRequest, parameters: ["":""])
+            .response { (request, response, data, error) in
+                println(request)
+                println(response)
+                println(data)
+                println(error)
+                //let json : JSON =
+                
+        }
+        
+        .responseString { (_, _, text, _) in
+                println(text)
+            //let json = JSON(data: text)
+            
+        }
+        
+
+        
 
         // Do any additional setup after loading the view.
     }
@@ -32,6 +54,12 @@ class ViewController: NSViewController {
         println("Hello From me")
         TempLabel.stringValue  = "-100"
         
+        Alamofire.request(.GET, "http://httpbin.org/get", parameters: ["foo": "bar"])
+            .response { (request, response, data, error) in
+                println(request)
+                println(response)
+                println(error)
+        }
         
         let requestSerializer = AFJSONRequestSerializer() as AFJSONRequestSerializer
         let responseSerializer = AFJSONResponseSerializer() as AFJSONResponseSerializer
@@ -47,12 +75,15 @@ class ViewController: NSViewController {
        
         
         tumblrCl.post("geekhost", type: "text", parameters: params!, callback: { (id : AnyObject!, err : NSError!) in
-            
-            println("Message Send")
-            
-        }        )
-
-
+            if ((err?) != nil)
+            {
+                print ("Unable to post message")
+            }
+            else
+            {
+                println("Message Send")
+            }
+        })
   }
 
 }
