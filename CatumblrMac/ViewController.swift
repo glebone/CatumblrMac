@@ -34,7 +34,23 @@ class ViewController: NSViewController {
         .responseString { (_, _, text, _) in
                 println(text)
             //let json = JSON(data: text)
+           
             
+        }
+        
+            .responseJSON { (req, res, text, error) in
+                if(error != nil) {
+                    NSLog("Error: \(error)")
+                    println(req)
+                    println(res)
+                }
+                else {
+                    var weather_json = JSON(text!)
+                    println(text)
+                    println(weather_json)
+                    println(weather_json["weather"]["curren_weather"][0]["weather_text"])
+                    self.TempLabel.stringValue = weather_json["weather"]["curren_weather"][0]["weather_text"].string!
+                }
         }
         
 
