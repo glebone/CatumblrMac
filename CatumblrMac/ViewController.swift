@@ -15,44 +15,17 @@ class ViewController: NSViewController {
      
     
     @IBOutlet weak var TempLabel: NSTextField!
+    @IBOutlet weak var BlogCaption: NSTextField!
+    
+    var weather_string : NSString = "+0"
+
     
     let weatherRequest : URLStringConvertible = "http://www.myweather2.com/developer/forecast.ashx?uac=pP9Pz3soUU&output=json&query=%2049.425267,%2032.063599&temp_unit=c"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Alamofire.request(.GET, weatherRequest, parameters: ["":""])
-            .response { (request, response, data, error) in
-                println(request)
-                println(response)
-                println(data)
-                println(error)
-                //let json : JSON =
-                
-        }
-        
-        .responseString { (_, _, text, _) in
-                println(text)
-            //let json = JSON(data: text)
-           
-            
-        }
-        
-            .responseJSON { (req, res, text, error) in
-                if(error != nil) {
-                    NSLog("Error: \(error)")
-                    println(req)
-                    println(res)
-                }
-                else {
-                    var weather_json = JSON(text!)
-                    println(text)
-                    println(weather_json)
-                    println(weather_json["weather"]["curren_weather"][0]["weather_text"])
-                    self.TempLabel.stringValue = weather_json["weather"]["curren_weather"][0]["weather_text"].string!
-                }
-        }
-        
+         self.getWeather()
 
         
 
@@ -65,10 +38,49 @@ class ViewController: NSViewController {
         }
     }
     
+    func getWeather () -> ()
+    {
+            Alamofire.request(.GET, weatherRequest, parameters: ["":""])
+            .response { (request, response, data, error) in
+                println(request)
+                println(response)
+                println(data)
+                println(error)
+                //let json : JSON =
+                
+            }
+            
+            .responseString { (_, _, text, _) in
+                println(text)
+                //let json = JSON(data: text)
+                
+                
+            }
+            
+            .responseJSON { (req, res, text, error) in
+                if(error != nil) {
+                    NSLog("Error: \(error)")
+                    println(req)
+                    println(res)
+                }
+                else {
+                    var weather_json = JSON(text!)
+                    println(text)
+                    println(weather_json)
+                    println(weather_json["weather"]["curren_weather"][0]["weather_text"])
+                    
+                    self.weather_string = weather_json["weather"]["curren_weather"][0]["temp"].string! + " " + weather_json["weather"]["curren_weather"][0]["weather_text"].string!
+                    self.TempLabel.stringValue = self.weather_string
+                }
+        }
+        
+        
+    }
+    
     @IBAction func pressAction(btnOpr: NSButton)
     {
         println("Hello From me")
-        TempLabel.stringValue  = "-100"
+        TempLabel.stringValue  = "Sending..."
         
         Alamofire.request(.GET, "http://httpbin.org/get", parameters: ["foo": "bar"])
             .response { (request, response, data, error) in
@@ -87,7 +99,11 @@ class ViewController: NSViewController {
         tumblrCl.OAuthToken = "PyvcruFPx1YqhdAOkCWjCPWMBIYx3fUJaiFzjhxpkwUwps0VjC"
         tumblrCl.OAuthTokenSecret = "Zjwmi2wYA83rtIdoL82BcWcj5sxm5QrI1MEnZX4DzFQHWydx1C"
         
-        let params : [NSString : NSString]? = ["type":"text", "body": "Sample text", "caption": "caption", "tags":"tags"]
+        var post_text : NSString = ""
+        
+        post_text = self.weather_string + " " + BlogCaption.stringValue
+        
+        let params : [NSString : NSString]? = ["type":"text", "body": post_text, "caption": "caption", "tags":"CatumblrMac"]
        
         
         tumblrCl.post("geekhost", type: "text", parameters: params!, callback: { (id : AnyObject!, err : NSError!) in
@@ -98,6 +114,7 @@ class ViewController: NSViewController {
             else
             {
                 println("Message Send")
+                self.TempLabel.stringValue = "Message sent!"
             }
         })
   }
