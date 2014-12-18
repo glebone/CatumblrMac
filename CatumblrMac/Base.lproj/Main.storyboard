@@ -706,10 +706,25 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Vc-lX-eri">
+                                <rect key="frame" x="170" y="216" width="48" height="48"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="4dB-Dr-Jte"/>
+                            </imageView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GkY-xL-129">
+                                <rect key="frame" x="285" y="220" width="122" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="image" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dSM-p0-PcB">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="controlContent"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="ImageSelected:" target="XfG-lQ-9wD" id="dXN-3S-j5l"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="BlogCaption" destination="mBl-jL-Ogv" id="GaE-g5-SaW"/>
+                        <outlet property="Preview" destination="2Vc-lX-eri" id="bgW-fp-wrW"/>
                         <outlet property="TempLabel" destination="TlY-jF-jDI" id="SCE-PT-xw1"/>
                     </connections>
                 </viewController>

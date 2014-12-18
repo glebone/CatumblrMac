@@ -16,16 +16,18 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var TempLabel: NSTextField!
     @IBOutlet weak var BlogCaption: NSTextField!
+    @IBOutlet weak var Preview: NSImageView!
     
     var weather_string : NSString = "+0"
 
     
     let weatherRequest : URLStringConvertible = "http://www.myweather2.com/developer/forecast.ashx?uac=pP9Pz3soUU&output=json&query=%2049.425267,%2032.063599&temp_unit=c"
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
          self.getWeather()
+       
+        
 
         
 
@@ -77,6 +79,23 @@ class ViewController: NSViewController {
         
     }
     
+    @IBAction func ImageSelected(sender: AnyObject) {
+        
+        let panel =  NSOpenPanel() as NSOpenPanel
+        panel.canChooseDirectories = false
+        panel.canChooseFiles = true
+        panel.canCreateDirectories = false
+        
+        panel.beginWithCompletionHandler({ (res: NSInteger) in
+           println("dsfsadf")
+           println(panel.URL)
+            let im = NSImage.self.init(byReferencingURL: panel.URL!) as NSImage
+            self.Preview.image = im
+        })
+        
+        
+        
+    }
     @IBAction func pressAction(btnOpr: NSButton)
     {
         println("Hello From me")
@@ -103,7 +122,9 @@ class ViewController: NSViewController {
         
         post_text = self.weather_string + " " + BlogCaption.stringValue
         
-        let params : [NSString : NSString]? = ["type":"text", "body": post_text, "caption": "caption", "tags":"CatumblrMac"]
+        let tags = "CatumblrMac ," + NSHost.currentHost().localizedName!
+        
+        let params : [NSString : NSString]? = ["type":"text", "body": post_text, "caption": "caption", "tags":tags]
        
         
         tumblrCl.post("geekhost", type: "text", parameters: params!, callback: { (id : AnyObject!, err : NSError!) in
