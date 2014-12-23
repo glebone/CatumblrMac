@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class ViewController: NSViewController {
 
+
      
     
     @IBOutlet weak var TempLabel: NSTextField!
@@ -19,7 +20,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var Preview: NSImageView!
     
     var weather_string : NSString = "+0"
-
+    var im_path = NSURL.init(string : "")
     
     let weatherRequest : URLStringConvertible = "http://www.myweather2.com/developer/forecast.ashx?uac=pP9Pz3soUU&output=json&query=%2049.425267,%2032.063599&temp_unit=c"
     
@@ -89,7 +90,8 @@ class ViewController: NSViewController {
         panel.beginWithCompletionHandler({ (res: NSInteger) in
            println("dsfsadf")
            println(panel.URL)
-            let im = NSImage.self.init(byReferencingURL: panel.URL!) as NSImage
+            self.im_path = panel.URL!
+            let im = NSImage.init(byReferencingURL: panel.URL!) as NSImage
             self.Preview.image = im
         })
         
@@ -124,10 +126,15 @@ class ViewController: NSViewController {
         
         let tags = "CatumblrMac ," + NSHost.currentHost().localizedName!
         
-        let params : [NSString : NSString]? = ["type":"text", "body": post_text, "caption": "caption", "tags":tags]
-       
-        
-        tumblrCl.post("geekhost", type: "text", parameters: params!, callback: { (id : AnyObject!, err : NSError!) in
+        if (self.im_path!.path? != nil)
+        {
+            let params : [NSString : NSString]? = ["body": post_text, "caption": post_text, "tags":tags]
+            let fpath = self.im_path!.path! as NSString
+            let fext = self.im_path!.pathExtension! as NSString
+            let fname = self.im_path!.lastPathComponent! as NSString
+  
+    
+            tumblrCl.photo("geekhost", filePathArray: [fpath], contentTypeArray: ["image/" + fext], fileNameArray: [fname], parameters: params, callback:{ (id : AnyObject!, err : NSError!) in
             if ((err?) != nil)
             {
                 print ("Unable to post message")
@@ -138,6 +145,24 @@ class ViewController: NSViewController {
                 self.TempLabel.stringValue = "Message sent!"
             }
         })
+    
+        }
+        else
+        {
+            let params : [NSString : NSString]? = ["type":"text", "body": post_text, "caption": "", "tags":tags]
+
+        tumblrCl.post("geekhost", type: "text", parameters: params!, callback: { (id : AnyObject!, err : NSError!) in
+            if ((err?) != nil)
+            {
+                print ("Unable to post message")
+            }
+           else
+            {
+                println("Message Send")
+                self.TempLabel.stringValue = "Message sent!"
+            }
+        })
+      }
   }
 
 }
